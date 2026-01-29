@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import logo from "@/assets/echoav-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <span className="font-display text-3xl tracking-wider text-foreground mb-4 block">
-              ECHO<span className="text-primary">AV</span>
-            </span>
+            <img src={logo} alt="Echo AV Event Productions" className="h-14 mb-4" />
             <p className="text-muted-foreground max-w-md mb-6">
               Professional audio, video, and lighting solutions for events of all 
               sizes. Serving Canada with premium AV production services.
