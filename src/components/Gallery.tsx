@@ -1,41 +1,49 @@
 import { useState } from "react";
 
+import event1 from "@/assets/gallery/event-1.jpg";
+import event2 from "@/assets/gallery/event-2.jpg";
+import event3 from "@/assets/gallery/event-3.jpeg";
+import event4 from "@/assets/gallery/event-4.jpg";
+import event5 from "@/assets/gallery/event-5.jpg";
+import event6 from "@/assets/gallery/event-6.jpg";
+import event7 from "@/assets/gallery/event-7.jpg";
+
 const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800&q=80",
-    alt: "Concert lighting setup",
-    category: "Concert",
+    url: event6,
+    alt: "Corporate gala with uplighting",
+    category: "Corporate",
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=800&q=80",
-    alt: "Conference event",
-    category: "Conference",
+    url: event1,
+    alt: "Outdoor venue lighting",
+    category: "Lighting",
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80",
-    alt: "Stage production",
+    url: event5,
+    alt: "Theatre stage production",
     category: "Theatre",
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1504680177321-2e6a879aac86?w=800&q=80",
-    alt: "Audio equipment",
-    category: "Audio",
+    url: event4,
+    alt: "Historic venue AV setup",
+    category: "Conference",
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
-    alt: "Live band performance",
-    category: "Concert",
+    url: event7,
+    alt: "Street festival performance",
+    category: "Live Music",
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=80",
-    alt: "DJ setup with lights",
-    category: "Lighting",
+    url: event3,
+    alt: "Acoustic performance setup",
+    category: "Concert",
   },
 ];
 
