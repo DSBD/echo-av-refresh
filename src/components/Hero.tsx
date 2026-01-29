@@ -33,13 +33,17 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="glow-primary text-lg px-8 group">
-              Get a Quote
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button asChild size="lg" className="glow-primary text-lg px-8 group">
+              <a href="#contact">
+                Get a Quote
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-muted-foreground/30 hover:bg-secondary group">
-              <Play className="mr-2 h-5 w-5" />
-              View Our Work
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 border-muted-foreground/30 hover:bg-secondary group">
+              <a href="#gallery">
+                <Play className="mr-2 h-5 w-5" />
+                View Our Work
+              </a>
             </Button>
           </div>
 
