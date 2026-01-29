@@ -71,9 +71,11 @@ const Contact = () => {
                 />
               </div>
 
-              <Button size="lg" className="glow-primary w-full sm:w-auto group">
-                Request Quote
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button asChild size="lg" className="glow-primary w-full sm:w-auto group">
+                <a href="mailto:events@echoav.ca">
+                  Request Quote
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </form>
           </div>
@@ -92,8 +94,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">Email</div>
-                    <a href="mailto:info@echoav.ca" className="text-foreground hover:text-primary transition-colors">
-                      info@echoav.ca
+                    <a href="mailto:events@echoav.ca" className="text-foreground hover:text-primary transition-colors">
+                      events@echoav.ca
                     </a>
                   </div>
                 </div>
@@ -104,8 +106,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">Phone</div>
-                    <a href="tel:+15551234567" className="text-foreground hover:text-primary transition-colors">
-                      (555) 123-4567
+                    <a href="tel:+19055152954" className="text-foreground hover:text-primary transition-colors">
+                      (905) 515-2954
                     </a>
                   </div>
                 </div>
@@ -117,7 +119,7 @@ const Contact = () => {
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">Location</div>
                     <span className="text-foreground">
-                      Serving all of Canada
+                      Greater Toronto Hamilton Area
                     </span>
                   </div>
                 </div>
