@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import eventImage from "@/assets/gallery/event-1.jpg";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -107,8 +108,8 @@ const Contact = () => {
           </div>
 
           {/* Info Side */}
-          <div className="lg:pl-12 flex">
-            <div className="glass rounded-2xl p-8 flex-1">
+          <div className="lg:pl-12 flex flex-col gap-6">
+            <div className="glass rounded-2xl p-8">
               <h3 className="font-display text-2xl mb-6 text-foreground">
                 CONTACT INFORMATION
               </h3>
@@ -156,6 +157,15 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden flex-1 min-h-[200px]">
+              <img
+                src={eventImage}
+                alt="Live event production by Echo AV"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
