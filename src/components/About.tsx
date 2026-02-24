@@ -23,14 +23,26 @@ const About = () => {
               YOUR TRUSTED <span className="gradient-text">AV PARTNER</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Based out of Hamilton, ON, EchoAV Event Productions has been delivering 
-              exceptional audio-visual experiences. From intimate weddings to large-scale 
-              festivals, we bring the technical expertise and premium equipment 
-              needed to make your event unforgettable.
+              EchoAV is a company that specializes in live event production &amp; corporate AV. 
+              We started out producing small live shows and concerts, but have since grown 
+              to handle events of all sizes. From corporate conferences to music festivals, 
+              EchoAV has the expertise and resources to turn any event into a success.
+            </p>
+            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
+              We take pride in our attention to detail and ability to bring our clients' 
+              visions to life. Whether it's managing logistics, coordinating audio and 
+              visual elements, or handling on-site production, EchoAV has you covered.
+            </p>
+            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
+              We cater to a wide range of clients including venues, universities, student 
+              groups, theatre groups, event planners, city BIA's, and more.
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              We service events in the Greater Toronto Hamilton Area and surrounding areas 
-              including Niagara Region, Halton Region, Norfolk County, and Guelph.
+              Our goal is to provide exceptional AV services for events of any scale. 
+              Whether it's an intimate gathering or a grand production, we pride ourselves 
+              on delivering top-notch audio, video, lighting, staging, and more. Our clients 
+              trust us to bring their events to life with our expertise and attention to 
+              detail, ensuring an unforgettable experience for all attendees.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
