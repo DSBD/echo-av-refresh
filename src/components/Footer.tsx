@@ -79,7 +79,7 @@ const Footer = () => {
             © {currentYear} EchoAV Event Productions Inc. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+            <a href="/privacy" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
               Privacy Policy
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
