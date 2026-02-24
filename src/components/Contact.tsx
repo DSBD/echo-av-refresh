@@ -16,9 +16,11 @@ const Contact = () => {
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl mb-6">
               LET'S CREATE <span className="gradient-text">TOGETHER</span>
             </h2>
+            <p className="text-muted-foreground text-lg mb-4">
+              Let us know if you have any questions about our services and/or if you would like to request a quote.
+            </p>
             <p className="text-muted-foreground text-lg mb-8">
-              Ready to bring your event to life? Fill out the form below and 
-              we'll get back to you with a custom quote within 24 hours.
+              We are often on job sites and running events. If we miss your call, please leave us a message or send us an email and we'll get back to you as soon as possible.
             </p>
 
             <form className="space-y-6">
@@ -119,8 +121,14 @@ const Contact = () => {
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">Location</div>
                     <span className="text-foreground">
-                      Greater Toronto Hamilton Area
+                      Based out of Hamilton, ON
                     </span>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      Serving the GTHA and surrounding areas including Niagara Region, Halton Region, Norfolk County, and Guelph.
+                    </p>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      If your location isn't listed, feel free to reach out and we can determine if we are able to come to your location.
+                    </p>
                   </div>
                 </div>
               </div>

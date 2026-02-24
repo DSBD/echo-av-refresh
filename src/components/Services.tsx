@@ -6,42 +6,42 @@ const services = [
     icon: Volume2,
     title: "AUDIO",
     description:
-      "Small to medium scale PA systems suitable for concerts, conferences, weddings, and more.",
+      "Small to medium scale PA systems suitable for small concerts, conferences, weddings, & more.",
     gradient: "from-primary/20 to-transparent",
   },
   {
     icon: Monitor,
     title: "VIDEO",
     description:
-      "Indoor projection screens and projectors for keynote speeches, movie nights, multi-cam feeds.",
+      "Indoor projection screens and projectors for keynote speeches, movie nights, multi-cam feeds, and more.",
     gradient: "from-accent/20 to-transparent",
   },
   {
     icon: Lightbulb,
     title: "LIGHTING",
     description:
-      "Full scale lighting rigs for theatre, concerts, up-lighting, ambient effects, and follow spots.",
+      "Full scale lighting rigs for theatre, concerts, up-lighting/ambient, and follow spots.",
     gradient: "from-primary/20 to-transparent",
   },
   {
     icon: Theater,
     title: "THEATRE",
     description:
-      "Wireless microphones, stage lighting, drape/backdrops, and staging for amazing performances.",
+      "We work with every level of theatre groups to supply equipment including wireless microphones, stage lighting, drape/backdrops, and staging ensuring amazing performances.",
     gradient: "from-accent/20 to-transparent",
   },
   {
     icon: Music2,
     title: "CONCERTS",
     description:
-      "Backline, PA systems, microphones, lighting, and staging for local and touring concerts.",
+      "Working with bands to provide backline, PA, microphones, lighting, and staging for local concerts.",
     gradient: "from-primary/20 to-transparent",
   },
   {
     icon: Users,
-    title: "CONFERENCES",
+    title: "CONFERENCES / LIVE EVENTS",
     description:
-      "Live-streaming, hybrid event technology, and everything for seamless corporate events.",
+      "Live-streaming & hybrid event technology, keynote speeches, and everything required to ensure your corporate event runs smoothly.",
     gradient: "from-accent/20 to-transparent",
   },
 ];
