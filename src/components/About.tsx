@@ -23,14 +23,14 @@ const About = () => {
               YOUR TRUSTED <span className="gradient-text">AV PARTNER</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Based in Canada, Echo AV has been delivering exceptional audio-visual 
-              experiences for over 15 years. From intimate weddings to large-scale 
+              Based out of Hamilton, ON, EchoAV Event Productions has been delivering 
+              exceptional audio-visual experiences. From intimate weddings to large-scale 
               festivals, we bring the technical expertise and premium equipment 
               needed to make your event unforgettable.
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Our team of passionate professionals works closely with you to 
-              understand your vision and deliver solutions that exceed expectations.
+              We service events in the Greater Toronto Hamilton Area and surrounding areas 
+              including Niagara Region, Halton Region, Norfolk County, and Guelph.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
