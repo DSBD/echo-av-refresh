@@ -66,7 +66,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
@@ -76,14 +76,17 @@ const Gallery = () => {
               onMouseEnter={() => setHoveredId(image.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              <img
-                src={image.url}
-                alt={image.alt}
-                className="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className={`${
-                index === 0 ? "aspect-square md:aspect-auto md:h-full min-h-[300px]" : "aspect-video md:aspect-auto md:h-full min-h-[200px]"
-              }`} />
+              <div
+                className={`${
+                  index === 0 ? "aspect-square md:aspect-auto md:h-full min-h-[300px]" : "aspect-video"
+                }`}
+              >
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
 
               {/* Overlay */}
               <div
