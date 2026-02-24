@@ -78,7 +78,7 @@ const Gallery = () => {
             >
               <div
                 className={`${
-                  index === 0 ? "aspect-square md:aspect-auto md:h-full" : "aspect-video"
+                  index === 0 ? "aspect-square md:aspect-auto md:h-full min-h-[300px]" : "aspect-square"
                 }`}
               >
                 <img
