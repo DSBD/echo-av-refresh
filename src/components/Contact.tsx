@@ -107,8 +107,8 @@ const Contact = () => {
           </div>
 
           {/* Info Side */}
-          <div className="lg:pl-12">
-            <div className="glass rounded-2xl p-8 mb-8">
+          <div className="lg:pl-12 flex">
+            <div className="glass rounded-2xl p-8 flex-1">
               <h3 className="font-display text-2xl mb-6 text-foreground">
                 CONTACT INFORMATION
               </h3>
@@ -156,22 +156,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* CTA Box */}
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-card to-accent/20 p-8 border border-primary/20">
-              <h3 className="font-display text-2xl mb-2 text-foreground">
-                NEED URGENT SUPPORT?
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Our team is available 24/7 for emergency support during your event.
-              </p>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Call Emergency Line
-              </Button>
-
-              {/* Decorative */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/30 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
