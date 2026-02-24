@@ -1,9 +1,25 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [eventType, setEventType] = useState("");
+  const [message, setMessage] = useState("");
+
+  const getMailtoHref = () => {
+    const subject = encodeURIComponent(
+      eventType ? `Quote Request: ${eventType}` : "Quote Request"
+    );
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nEvent Type: ${eventType}\n\n${message}`
+    );
+    return `mailto:events@echoav.ca?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -29,23 +45,27 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Your Name
                   </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="John Doe"
-                    className="bg-card border-border focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="john@example.com"
-                    className="bg-card border-border focus:border-primary"
-                  />
+                    <Input
+                      id="name"
+                      type="text"
+                      placeholder="John Doe"
+                      className="bg-card border-border focus:border-primary"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      Email Address
+                    </label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="john@example.com"
+                      className="bg-card border-border focus:border-primary"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                 </div>
               </div>
 
@@ -58,6 +78,8 @@ const Contact = () => {
                   type="text"
                   placeholder="Concert, Wedding, Conference, etc."
                   className="bg-card border-border focus:border-primary"
+                  value={eventType}
+                  onChange={(e) => setEventType(e.target.value)}
                 />
               </div>
 
@@ -70,11 +92,13 @@ const Contact = () => {
                   placeholder="Describe your event, date, venue, and any specific requirements..."
                   rows={5}
                   className="bg-card border-border focus:border-primary resize-none"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
 
               <Button asChild size="lg" className="glow-primary w-full sm:w-auto group">
-                <a href="mailto:events@echoav.ca">
+                <a href={getMailtoHref()}>
                   Request Quote
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
