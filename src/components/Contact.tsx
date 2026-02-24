@@ -1,22 +1,33 @@
 import { useState } from "react";
+import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Mail, Phone, MapPin, ArrowRight, CalendarIcon, Clock } from "lucide-react";
+import { cn } from "@/lib/utils";
 import eventImage from "@/assets/gallery/event-1.jpg";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [eventType, setEventType] = useState("");
+  const [location, setLocation] = useState("");
+  const [startDate, setStartDate] = useState<Date>();
+  const [startTime, setStartTime] = useState("");
+  const [endDate, setEndDate] = useState<Date>();
+  const [endTime, setEndTime] = useState("");
   const [message, setMessage] = useState("");
 
   const getMailtoHref = () => {
     const subject = encodeURIComponent(
       eventType ? `Quote Request: ${eventType}` : "Quote Request"
     );
+    const startStr = startDate ? `${format(startDate, "PPP")}${startTime ? ` at ${startTime}` : ""}` : "Not specified";
+    const endStr = endDate ? `${format(endDate, "PPP")}${endTime ? ` at ${endTime}` : ""}` : "Not specified";
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nEvent Type: ${eventType}\n\n${message}`
+      `Name: ${name}\nEmail: ${email}\nEvent Type: ${eventType}\nLocation: ${location}\nStart: ${startStr}\nEnd: ${endStr}\n\n${message}`
     );
     return `mailto:events@echoav.ca?subject=${subject}&body=${body}`;
   };
@@ -85,12 +96,101 @@ const Contact = () => {
               </div>
 
               <div>
+                <label htmlFor="location" className="block text-sm font-medium text-foreground mb-2">
+                  Event Location
+                </label>
+                <Input
+                  id="location"
+                  type="text"
+                  placeholder="Venue name or address"
+                  className="bg-card border-border focus:border-primary"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                />
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Start Date & Time
+                  </label>
+                  <div className="flex gap-2">
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "flex-1 justify-start text-left font-normal bg-card border-border",
+                            !startDate && "text-muted-foreground"
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {startDate ? format(startDate, "PPP") : "Pick date"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={startDate}
+                          onSelect={setStartDate}
+                          initialFocus
+                          className={cn("p-3 pointer-events-auto")}
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <Input
+                      type="time"
+                      className="w-[120px] bg-card border-border focus:border-primary"
+                      value={startTime}
+                      onChange={(e) => setStartTime(e.target.value)}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    End Date & Time
+                  </label>
+                  <div className="flex gap-2">
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "flex-1 justify-start text-left font-normal bg-card border-border",
+                            !endDate && "text-muted-foreground"
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {endDate ? format(endDate, "PPP") : "Pick date"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={endDate}
+                          onSelect={setEndDate}
+                          initialFocus
+                          className={cn("p-3 pointer-events-auto")}
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <Input
+                      type="time"
+                      className="w-[120px] bg-card border-border focus:border-primary"
+                      value={endTime}
+                      onChange={(e) => setEndTime(e.target.value)}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                   Tell Us About Your Event
                 </label>
                 <Textarea
                   id="message"
-                  placeholder="Describe your event, date, venue, and any specific requirements..."
+                  placeholder="Describe your event, venue, and any specific requirements..."
                   rows={5}
                   className="bg-card border-border focus:border-primary resize-none"
                   value={message}
