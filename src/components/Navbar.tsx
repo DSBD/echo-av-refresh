@@ -34,7 +34,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button asChild variant="default" className="glow-primary">
-              <a href="mailto:events@echoav.ca">Get a Quote</a>
+              <a href="/#contact">Get a Quote</a>
             </Button>
           </div>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button asChild variant="default" className="glow-primary w-full mt-2">
-                <a href="mailto:events@echoav.ca">Get a Quote</a>
+                <a href="/#contact">Get a Quote</a>
               </Button>
             </div>
           </div>
