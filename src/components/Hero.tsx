@@ -34,7 +34,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Button asChild size="lg" className="glow-primary text-lg px-8 group">
-              <a href="mailto:events@echoav.ca">
+              <a href="#contact">
                 Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
